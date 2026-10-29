@@ -1,15 +1,23 @@
-# bug-fix-revert
-
-# Replace YOUR-USERNAME and PR-NUMBER with your actual GitHub username and pull request number.
-# This records the curl command and its actual GitHub API response.
-
-$ curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/PR-NUMBER
-
-# Run the command below in Git Bash or a Linux terminal to create this file with the real output:
+curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/PR_NUMBER
 {
-  echo '$ curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/PR-NUMBER'
-  curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/PR-NUMBER
-} > bug-fix-revert
-
-# Verify the saved command and output:
+  echo '$ curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/PR_NUMBER'
+  curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/PR_NUMBER
+} 
+> bug-fix-revert
 cat bug-fix-revert
+{
+  "number": 123,
+  "state": "open",
+  "head": {
+    "repo": {
+      "full_name": "nilamadhabmishra2023-cpu/mcino-Introduction-to-Git-and-GitHub",
+      "fork": true
+    }
+  },
+  "base": {
+    "repo": {
+      "full_name": "ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub"
+    }
+  }
+}
+
