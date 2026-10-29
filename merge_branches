@@ -1,1 +1,29 @@
+# Corrected merge-output capture instructions
 
+# Run these commands from inside your cloned repository.
+# Replace FIRST-MERGE-BRANCH and SECOND-MERGE-BRANCH with your actual branch names.
+
+{
+  echo '$ git merge FIRST-MERGE-BRANCH'
+  git merge FIRST-MERGE-BRANCH
+  echo
+  echo '$ git merge SECOND-MERGE-BRANCH'
+  git merge SECOND-MERGE-BRANCH
+} 2>&1 | tee merge-output.txt
+
+{
+  echo '$ git show --stat --oneline HEAD'
+  git show --stat --oneline HEAD
+  echo
+  echo '$ git status'
+  git status
+} 2>&1 | tee -a merge-output.txt
+
+# Review merge-output.txt and copy the actual command/output transcript into the file
+# required by your assignment. The relevant evidence should show README.md and a summary
+# such as "1 file changed, 1 insertion(+), 1 deletion(-)" if that is what Git reports.
+#
+# Example only (not verified terminal output):
+# README.md | 2 +-
+# 1 file changed, 1 insertion(+), 1 deletion(-)
+#
