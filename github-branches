@@ -1,6 +1,30 @@
-$ git branch -a
-# Paste the actual terminal output here to display branch names and status.
+# Required branch verification: main, bug-fix-typo, bug-fix-revert
+# Run these commands from inside your cloned mcino-Introduction-to-Git-and-GitHub repository.
+# These commands show real branch names and their tracking/status information.
 
-# For remote branches in your GitHub repository, run:
-$ git ls-remote --heads https://github.com/YOUR-USERNAME/REPOSITORY.git
-# Replace YOUR-USERNAME and REPOSITORY, then paste the actual output here.
+$ git fetch origin
+$ git branch -a -vv
+
+# If a required branch is missing, check whether it exists on the remote:
+$ git ls-remote --heads origin main bug-fix-typo bug-fix-revert
+
+# If bug-fix-typo or bug-fix-revert does not exist locally but exists on origin, create tracking branches:
+$ git switch --track origin/bug-fix-typo
+# (If already on another branch, switch back as needed.)
+$ git switch --track origin/bug-fix-revert
+
+# Save actual command output for submission (run this from the repository):
+{
+  echo '$ git fetch origin'
+  git fetch origin
+  echo
+  echo '$ git branch -a -vv'
+  git branch -a -vv
+  echo
+  echo '$ git status'
+  git status
+} 2>&1 | tee github-branches
+
+# The submitted output must be the real output from your repository.
+# Do not invent branch names, commit hashes, or statuses. Ensure main, bug-fix-typo,
+# and bug-fix-revert are present and their status information is visible.
