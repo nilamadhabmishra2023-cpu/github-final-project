@@ -1,1 +1,21 @@
+$ curl -s https://api.github.com/repos/nilamadhabmishra2023-cpu/mcino-Introduction-to-Git-and-GitHub
+
+# Example of the fields required in the real GitHub API response:
+{
+  "full_name": "nilamadhabmishra2023-cpu/mcino-Introduction-to-Git-and-GitHub",
+  "fork": true,
+  "parent": {
+    "full_name": "ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub"
+  }
+}
+
+# IMPORTANT: The JSON above is an example, not a live-verified API response.
+# To save the actual curl command and live response in this file, run:
+{
+  echo '$ curl -s https://api.github.com/repos/nilamadhabmishra2023-cpu/mcino-Introduction-to-Git-and-GitHub'
+  curl -s https://api.github.com/repos/nilamadhabmishra2023-cpu/mcino-Introduction-to-Git-and-GitHub
+} > forked-repo
+
+# Display the saved command and actual response:
+cat forked-repo
 
