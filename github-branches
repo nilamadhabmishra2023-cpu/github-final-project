@@ -1,0 +1,6 @@
+$ git branch -a
+# Paste the actual terminal output here to display branch names and status.
+
+# For remote branches in your GitHub repository, run:
+$ git ls-remote --heads https://github.com/YOUR-USERNAME/REPOSITORY.git
+# Replace YOUR-USERNAME and REPOSITORY, then paste the actual output here.
